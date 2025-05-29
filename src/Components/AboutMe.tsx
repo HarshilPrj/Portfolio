@@ -112,7 +112,6 @@ const SkillCard: React.FC<SkillCardProps> = ({ label, Icon }) => {
         <div className="flex flex-col items-center bg-[#1c1c1c] p-4 rounded-lg shadow hover:scale-105 transition duration-300">
             <Icon className="text-3xl text-orange-500 mb-2" />
             <h4 className="text-white font-semibold">{label}</h4>
-            {/* <p className="text-sm text-gray-400">{percent}%</p> */}
         </div>
     );
 };
