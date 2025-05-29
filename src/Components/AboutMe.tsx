@@ -101,6 +101,11 @@ interface SkillCardProps {
     label: string;
     Icon: React.ComponentType<{ size?: number; className?: string }>;
 }
+interface ExperienceCardProps {
+    role: string;
+    company: string;
+    duration: string;
+}
 
 const SkillCard: React.FC<SkillCardProps> = ({ label, Icon }) => {
     return (
@@ -112,7 +117,7 @@ const SkillCard: React.FC<SkillCardProps> = ({ label, Icon }) => {
     );
 };
 
-function ExperienceCard({ role, company, duration }: any) {
+const ExperienceCard: React.FC<ExperienceCardProps> = ({ role, company, duration }) => {
     return (
         <div className="bg-[#1c1c1c] rounded-lg p-5 shadow-md hover:shadow-orange-500/40 transition duration-300">
             <h4 className="text-lg font-semibold text-white">{role}</h4>
@@ -120,4 +125,4 @@ function ExperienceCard({ role, company, duration }: any) {
             <p className="text-gray-400 text-xs mb-2">{duration}</p>
         </div>
     );
-}
+};
