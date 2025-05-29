@@ -1,6 +1,5 @@
 "use client";
 import AboutMe from "@/Components/AboutMe";
-import ContactForm from "@/Components/ContactForm";
 import Footer from "@/Components/Footer";
 import Header from "@/Components/Header";
 import Hero from "@/Components/Hero";

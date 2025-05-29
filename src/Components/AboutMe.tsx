@@ -2,6 +2,7 @@
 import { FaNodeJs, FaRegFilePdf, FaReact, FaAws } from "react-icons/fa";
 import { SiPostgresql, SiNestjs, SiMongodb, SiRazorpay, SiSocketdotio } from "react-icons/si";
 import { RiTailwindCssFill, RiNextjsLine } from "react-icons/ri";
+import Image from "next/image";
 
 export default function AboutMe() {
     const experiencesData = [
@@ -33,9 +34,10 @@ export default function AboutMe() {
             <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-center">
                 {/* Image Section */}
                 <div className="flex justify-center">
-                    <img src="/about.png" alt="About Me" className="rounded-lg max-w-sm w-full object-cover" />
+                    <div className="w-full max-w-sm">
+                        <Image src="/about.png" alt="About Me" width={400} height={300} className="rounded-lg w-full object-cover" />
+                    </div>
                 </div>
-
                 {/* Text Section */}
                 <div>
                     <h2 className="text-3xl font-bold mb-2">About Me</h2>
@@ -100,11 +102,7 @@ interface SkillCardProps {
     Icon: React.ComponentType<{ size?: number; className?: string }>;
 }
 
-const SkillCard: React.FC<SkillCardProps> = ({ percent, label, Icon }) => {
-    const radius = 30;
-    const circumference = 2 * Math.PI * radius;
-    const offset = circumference - (percent / 100) * circumference;
-
+const SkillCard: React.FC<SkillCardProps> = ({ label, Icon }) => {
     return (
         <div className="flex flex-col items-center bg-[#1c1c1c] p-4 rounded-lg shadow hover:scale-105 transition duration-300">
             <Icon className="text-3xl text-orange-500 mb-2" />

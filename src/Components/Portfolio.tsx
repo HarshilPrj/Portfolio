@@ -1,8 +1,6 @@
 "use client";
 
-import { useState } from "react";
-
-const filters = ["All", "Website Design", "App Mobile Design", "App Desktop", "Branding"];
+import Image from "next/image";
 
 const projects = Array.from({ length: 6 }).map((_, i) => ({
     id: i,
@@ -12,8 +10,6 @@ const projects = Array.from({ length: 6 }).map((_, i) => ({
 }));
 
 export default function Portfolio() {
-    const [activeFilter, setActiveFilter] = useState("All");
-
     return (
         <section className="bg-black py-12 px-4 sm:px-6 lg:px-12 text-white" id="portfolio">
             <div className="max-w-7xl mx-auto">
@@ -23,7 +19,9 @@ export default function Portfolio() {
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                     {projects.map((project) => (
                         <div key={project.id} className="bg-[#1e1e1e] rounded-xl overflow-hidden shadow-lg">
-                            <img src={project.image} alt={project.name} className="w-full h-64 object-cover" />
+                            <div className="relative w-full h-64">
+                                <Image src={project.image} alt={project.name} fill className="object-cover" />
+                            </div>
                             <div className="p-4">
                                 <h3 className="font-semibold text-lg">{project.name}</h3>
                                 <p className="text-sm text-gray-400">{project.category}</p>

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { HiMenuAlt3 } from "react-icons/hi";
 import { FiSun, FiMoon } from "react-icons/fi";
 import { useTheme } from "next-themes";
