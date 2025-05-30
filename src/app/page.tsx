@@ -1,11 +1,11 @@
 "use client";
-import AboutMe from "@/components/AboutMe";
-import Footer from "@/components/Footer";
-import Header from "@/components/Header";
-import Hero from "@/components/Hero";
-import Portfolio from "@/components/Portfolio";
-import Services from "@/components/Services";
-import Stats from "@/components/Stats";
+import AboutMe from "@/Components/AboutMe";
+import Footer from "@/Components/Footer";
+import Header from "@/Components/Header";
+import Hero from "@/Components/Hero";
+import Portfolio from "@/Components/Portfolio";
+import Services from "@/Components/Services";
+import Stats from "@/Components/Stats";
 
 export default function Layout() {
     return (
@@ -18,7 +18,6 @@ export default function Layout() {
                     <Services />
                     <AboutMe />
                     <Portfolio />
-                    {/* <ContactForm /> */}
                     <Footer />
                 </div>
             </div>
