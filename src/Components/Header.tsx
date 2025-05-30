@@ -1,12 +1,10 @@
 import Link from "next/link";
 import { useState } from "react";
 import { HiMenuAlt3 } from "react-icons/hi";
-import { FiSun, FiMoon } from "react-icons/fi";
-import { useTheme } from "next-themes";
+import ThemeToggle from "./ThemeToggle";
 
 const Header = () => {
     const [activeTab, setActiveTab] = useState("hero");
-    const { theme, setTheme } = useTheme();
 
     const handleTab = (id: string) => {
         setActiveTab(id);
@@ -25,10 +23,6 @@ const Header = () => {
         }
     };
 
-    const handleTheme = () => {
-        setTheme(theme === "light" ? "dark" : "light");
-    };
-
     return (
         <header className="py-6 px-4 sm:px-6 lg:px-8 sticky top-0 z-50 dark:bg-black bg-white">
             <div className="container mx-auto flex justify-between items-center">
@@ -45,33 +39,39 @@ const Header = () => {
                 {/* Desktop Navigation - hidden on mobile, visible on medium screens and up */}
                 <nav className="hidden md:flex items-center space-x-8">
                     <button
-                        className={`${activeTab === "hero" ? "text-orange-500" : "text-white"} font-semibold cursor-pointer`}
+                        className={`${activeTab === "hero" ? "text-orange-500" : "text-black dark:text-white"} text-black font-semibold cursor-pointer `}
                         onClick={() => handleTab("hero")}
                     >
                         Home
                     </button>
                     <button
                         className={`${
-                            activeTab === "service_layout" ? "text-orange-500" : "text-white"
+                            activeTab === "service_layout" ? "text-orange-500" : "text-black dark:text-white"
                         } hover:text-orange-500 transition-colors cursor-pointer`}
                         onClick={() => handleTab("service_layout")}
                     >
                         Services
                     </button>
                     <button
-                        className={`${activeTab === "about_me" ? "text-orange-500" : "text-white"} hover:text-orange-500 transition-colors cursor-pointer`}
+                        className={`${
+                            activeTab === "about_me" ? "text-orange-500" : "text-black dark:text-white"
+                        } hover:text-orange-500 transition-colors cursor-pointer`}
                         onClick={() => handleTab("about_me")}
                     >
                         About me
                     </button>
                     <button
-                        className={`${activeTab === "portfolio" ? "text-orange-500" : "text-white"} hover:text-orange-500 transition-colors cursor-pointer`}
+                        className={`${
+                            activeTab === "portfolio" ? "text-orange-500" : "text-black dark:text-white"
+                        } hover:text-orange-500 transition-colors cursor-pointer`}
                         onClick={() => handleTab("portfolio")}
                     >
                         Portfolio
                     </button>
                     <button
-                        className={`${activeTab === "contact_me" ? "text-orange-500" : "text-white"} hover:text-orange-500 transition-colors cursor-pointer`}
+                        className={`${
+                            activeTab === "contact_me" ? "text-orange-500" : "text-black dark:text-white"
+                        } hover:text-orange-500 transition-colors cursor-pointer`}
                         onClick={() => handleTab("contact_me")}
                     >
                         Contact me
@@ -79,12 +79,7 @@ const Header = () => {
                 </nav>
 
                 {/* Hire Me Button */}
-                <button
-                    className="bg-orange-500 text-white font-bold py-3 px-8 rounded-md hover:bg-orange-600 transition-colors cursor-pointer"
-                    onClick={handleTheme}
-                >
-                    {theme !== "dark" ? <FiSun className="h-5 w-5" /> : <FiMoon className="h-5 w-5" />}
-                </button>
+                <ThemeToggle />
             </div>
         </header>
     );

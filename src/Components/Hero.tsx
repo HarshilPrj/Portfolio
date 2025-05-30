@@ -3,10 +3,7 @@ import { FaInstagram, FaLinkedinIn, FaDribbble, FaBehance } from "react-icons/fa
 
 const Home = () => {
     return (
-        <section
-            className="container mx-auto flex flex-col md:flex-row items-center justify-center py-12 px-4 sm:px-6 lg:px-8 bg-white dark:bg-black"
-            id="hero"
-        >
+        <section className="container mx-auto flex flex-col md:flex-row items-center justify-center py-12 px-4 sm:px-6 lg:px-8" id="hero">
             {/* --- Text & Buttons Content --- */}
             <div className="md:w-1/2 text-center md:text-left order-2 md:order-1 ">
                 <p className="text-lg text-[#707070]">Hi I am</p>
@@ -32,7 +29,7 @@ const Home = () => {
 
                 {/* Action Buttons */}
                 <div className="mt-8 flex justify-center md:justify-start space-x-4">
-                    <button className="bg-orange-500 dark:bg-red-200 text-white font-bold py-3 px-8 rounded-md hover:bg-orange-600 transition-colors cursor-pointer">
+                    <button className="bg-orange-500 text-white font-bold py-3 px-8 rounded-md hover:bg-orange-600 transition-colors cursor-pointer">
                         Hire Me
                     </button>
                     <button className="bg-transparent border border-gray-600 text-[#959595] font-bold py-1 px-8 rounded-md hover:bg-gray-800 transition-colors cursor-pointer">

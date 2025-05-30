@@ -1,7 +1,7 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import { Lato } from "next/font/google";
-import { ThemeProvider } from "next-themes";
+import { ThemeProvider } from "./context/ThemeContext";
 
 const lato = Lato({
     variable: "--font-lato",
@@ -16,17 +16,11 @@ export const metadata: Metadata = {
     description: "Portfolio",
 };
 
-export default function RootLayout({
-    children,
-}: Readonly<{
-    children: React.ReactNode;
-}>) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
     return (
-        <html lang="en" suppressHydrationWarning>
-            <body className={`${lato.variable} antialiased`}>
-                <ThemeProvider attribute={"class"} enableSystem defaultTheme="system">
-                    {children}
-                </ThemeProvider>
+        <html lang="en">
+            <body className={`${lato.className}`}>
+                <ThemeProvider>{children}</ThemeProvider>
             </body>
         </html>
     );

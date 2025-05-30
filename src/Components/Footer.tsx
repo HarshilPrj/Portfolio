@@ -2,7 +2,7 @@ import { FaInstagram, FaLinkedinIn, FaEnvelope, FaPhoneAlt } from "react-icons/f
 
 export default function Footer() {
     return (
-        <footer className="bg-[#1a1a1a] text-white py-10 px-4" id="contact_me">
+        <footer className="dark:bg-[#1a1a1a] dark:text-white text-black py-10 px-4" id="contact_me">
             <div className="max-w-6xl mx-auto text-center space-y-6">
                 {/* Logo */}
                 <div className="text-orange-500 font-bold text-xl">Contact Me</div>
@@ -18,7 +18,7 @@ export default function Footer() {
                 </div>
 
                 {/* Contact Details */}
-                <div className="flex flex-col sm:flex-row justify-center items-center gap-4 text-sm text-gray-300">
+                <div className="flex flex-col sm:flex-row justify-center items-center gap-4 text-sm dark:text-gray-300">
                     <div className="flex items-center gap-2">
                         <FaEnvelope className="text-sm" />
                         <span>prajapatiharshil625@gmail.com</span>

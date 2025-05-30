@@ -30,7 +30,7 @@ export default function AboutMe() {
     ];
 
     return (
-        <section className="bg-[#111111] text-white py-16 px-4 sm:px-6 lg:px-20" id="about_me">
+        <section className="dark:bg-[#111111] text-white py-16 px-4 sm:px-6 lg:px-20" id="about_me">
             <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-center">
                 {/* Image Section */}
                 <div className="flex justify-center">
@@ -40,9 +40,9 @@ export default function AboutMe() {
                 </div>
                 {/* Text Section */}
                 <div>
-                    <h2 className="text-3xl font-bold mb-2">About Me</h2>
+                    <h2 className="text-3xl font-bold mb-2 dark:text-white text-black">About Me</h2>
                     <p className="text-orange-500 mb-6">User Interface And User Experience And Also Video Editing</p>
-                    <p className="text-gray-300 mb-6 leading-relaxed text-justify">
+                    <p className="dark:text-gray-300 mb-6 leading-relaxed text-justify text-black">
                         Passionate MERN Stack developer with over <b>3+ Year</b> of experience building scalable web applications and RESTful APIs. Proficient
                         in JavaScript, Express, Nest js and MongoDB, with a strong focus on clean, maintainable code and performance optimization. Dedicated to
                         continuous learning and eager to contribute to innovative projects within collaborative, fast-paced teams.
@@ -55,11 +55,11 @@ export default function AboutMe() {
 
             {/* Experience Section */}
             <div className="mt-16">
-                <h3 className="text-2xl font-semibold mb-6">Education</h3>
+                <h3 className="text-2xl font-semibold mb-6 dark:text-white text-black">Education</h3>
                 <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
                     {educationData.map((item, index) => (
-                        <div className="bg-[#1c1c1c] rounded-lg p-5 shadow-md hover:shadow-orange-500/40 transition duration-300" key={index}>
-                            <h4 className="text-lg font-semibold text-white">{item?.deggre}</h4>
+                        <div className="dark:bg-[#1c1c1c] rounded-lg p-5 shadow-md hover:shadow-orange-500/40 transition duration-300" key={index}>
+                            <h4 className="text-lg font-semibold dark:text-white text-black">{item?.deggre}</h4>
                             <p className="text-orange-400 text-sm">{item?.college}</p>
                         </div>
                     ))}
@@ -68,7 +68,7 @@ export default function AboutMe() {
 
             {/* Experience Section */}
             <div className="mt-16">
-                <h3 className="text-2xl font-semibold mb-6">Experience</h3>
+                <h3 className="text-2xl font-semibold mb-6 dark:text-white text-black">Experience</h3>
                 <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
                     {experiencesData.map((exp, index) => (
                         <ExperienceCard key={index} {...exp} />
@@ -109,19 +109,19 @@ interface ExperienceCardProps {
 
 const SkillCard: React.FC<SkillCardProps> = ({ label, Icon }) => {
     return (
-        <div className="flex flex-col items-center bg-[#1c1c1c] p-4 rounded-lg shadow hover:scale-105 transition duration-300">
+        <div className="flex flex-col items-center dark:bg-[#1c1c1c] p-4 rounded-lg shadow hover:scale-105 transition duration-300">
             <Icon className="text-3xl text-orange-500 mb-2" />
-            <h4 className="text-white font-semibold">{label}</h4>
+            <h4 className="dark:text-white text-black font-semibold">{label}</h4>
         </div>
     );
 };
 
 const ExperienceCard: React.FC<ExperienceCardProps> = ({ role, company, duration }) => {
     return (
-        <div className="bg-[#1c1c1c] rounded-lg p-5 shadow-md hover:shadow-orange-500/40 transition duration-300">
-            <h4 className="text-lg font-semibold text-white">{role}</h4>
+        <div className="dark:bg-[#1c1c1c] rounded-lg p-5 shadow-md hover:shadow-orange-500/40 transition duration-300">
+            <h4 className="text-lg font-semibold dark:text-white text-black">{role}</h4>
             <p className="text-orange-400 text-sm">{company}</p>
-            <p className="text-gray-400 text-xs mb-2">{duration}</p>
+            <p className="dark:text-gray-400 text-black text-xs mb-2">{duration}</p>
         </div>
     );
 };
