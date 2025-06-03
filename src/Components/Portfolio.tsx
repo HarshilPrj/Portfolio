@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 
-let projects = [
+const projects = [
     { id: 1, name: "Event Bazaar ", client: "Indian", image: "/event.png" },
     { id: 2, name: "Iron Depot", client: "Canada", image: "/iron-depot.png" },
     { id: 3, name: "Solo Design Studio", client: "USA", image: "/portfolio.png" },

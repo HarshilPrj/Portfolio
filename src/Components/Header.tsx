@@ -33,7 +33,7 @@ const Header = () => {
     useEffect(() => {
         window.addEventListener("scroll", handleScroll, { passive: true });
         return () => window.removeEventListener("scroll", handleScroll);
-    }, []);
+    });
 
     return (
         <header className="py-6 px-4 sm:px-6 lg:px-8 sticky top-0 z-50 dark:bg-black bg-white">
@@ -45,7 +45,7 @@ const Header = () => {
                 <h1 className="text-2xl font-bold text-white flex-grow text-center md:flex-grow-0 md:text-left" />
 
                 <nav className="hidden md:flex items-center space-x-8">
-                    {sections.map((sectionId, idx) => {
+                    {sections.map((sectionId) => {
                         const labelMap = {
                             hero: "Home",
                             service_layout: "Services",
