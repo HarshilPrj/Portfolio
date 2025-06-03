@@ -2,6 +2,7 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { Lato } from "next/font/google";
 import { ThemeProvider } from "./context/ThemeContext";
+import ClientWrapper from "./ClientWrapper"; // Adjust path if needed
 
 const lato = Lato({
     variable: "--font-lato",
@@ -20,7 +21,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     return (
         <html lang="en">
             <body className={`${lato.className}`}>
-                <ThemeProvider>{children}</ThemeProvider>
+                <ThemeProvider>
+                    <ClientWrapper>{children}</ClientWrapper>
+                </ThemeProvider>
             </body>
         </html>
     );

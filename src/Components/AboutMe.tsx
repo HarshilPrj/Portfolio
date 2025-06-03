@@ -30,7 +30,7 @@ export default function AboutMe() {
     ];
 
     return (
-        <section className="dark:bg-[#111111] text-white py-16 px-4 sm:px-6 lg:px-20" id="about_me">
+        <section className="dark:bg-[#111111] text-white" id="about_me">
             <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-center">
                 {/* Image Section */}
                 <div className="flex justify-center">
@@ -41,9 +41,9 @@ export default function AboutMe() {
                 {/* Text Section */}
                 <div>
                     <h2 className="text-3xl font-bold mb-2 dark:text-white text-black">About Me</h2>
-                    <p className="text-orange-500 mb-6">User Interface And User Experience And Also Video Editing</p>
+                    <p className="text-orange-500 mb-6">User Interface And User Experience</p>
                     <p className="dark:text-gray-300 mb-6 leading-relaxed text-justify text-black">
-                        Passionate MERN Stack developer with over <b>3+ Year</b> of experience building scalable web applications and RESTful APIs. Proficient
+                        Passionate MERN Stack developer with over <b>3+ year</b> of experience building scalable web applications and RESTful APIs. Proficient
                         in JavaScript, Express, Nest js and MongoDB, with a strong focus on clean, maintainable code and performance optimization. Dedicated to
                         continuous learning and eager to contribute to innovative projects within collaborative, fast-paced teams.
                     </p>
@@ -78,18 +78,18 @@ export default function AboutMe() {
 
             {/* Skills Section */}
             <div className="mt-16">
-                <h3 className="text-2xl font-semibold mb-6">Skills</h3>
+                <h3 className="text-2xl font-semibold mb-6 dark:text-white text-black">Skills</h3>
                 <div className="mt-16 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6 text-center">
-                    <SkillCard Icon={FaNodeJs} label="Node Js" percent={80} />
-                    <SkillCard Icon={SiNestjs} label="Nest Js" percent={70} />
-                    <SkillCard Icon={FaReact} label="React Js" percent={60} />
-                    <SkillCard Icon={RiNextjsLine} label="Next Js" percent={60} />
-                    <SkillCard Icon={RiTailwindCssFill} label="Tailwind CSS" percent={50} />
-                    <SkillCard Icon={SiPostgresql} label="Postgresql" percent={60} />
-                    <SkillCard Icon={SiMongodb} label="Mongoose" percent={60} />
-                    <SkillCard Icon={FaAws} label="AWS" percent={50} />
-                    <SkillCard Icon={SiRazorpay} label="Razorpay" percent={50} />
-                    <SkillCard Icon={SiSocketdotio} label="Socket.io  " percent={50} />
+                    <SkillCard Icon={FaNodeJs} label="Node Js" className={"flip-left"} />
+                    <SkillCard Icon={SiNestjs} label="Nest Js" className={"fade-down-left"} />
+                    <SkillCard Icon={FaReact} label="React Js" className={""} />
+                    <SkillCard Icon={RiNextjsLine} label="Next Js" className={""} />
+                    <SkillCard Icon={RiTailwindCssFill} label="Tailwind CSS" className={""} />
+                    <SkillCard Icon={SiPostgresql} label="Postgresql" className={""} />
+                    <SkillCard Icon={SiMongodb} label="Mongoose" className={""} />
+                    <SkillCard Icon={FaAws} label="AWS" className={""} />
+                    <SkillCard Icon={SiRazorpay} label="Razorpay" className={""} />
+                    <SkillCard Icon={SiSocketdotio} label="Socket.io " className={""} />
                 </div>
             </div>
         </section>
@@ -97,19 +97,20 @@ export default function AboutMe() {
 }
 
 interface SkillCardProps {
-    percent: number;
     label: string;
     Icon: React.ComponentType<{ size?: number; className?: string }>;
+    className: string;
 }
+
 interface ExperienceCardProps {
     role: string;
     company: string;
     duration: string;
 }
 
-const SkillCard: React.FC<SkillCardProps> = ({ label, Icon }) => {
+const SkillCard: React.FC<SkillCardProps> = ({ label, Icon, className }) => {
     return (
-        <div className="flex flex-col items-center dark:bg-[#1c1c1c] p-4 rounded-lg shadow hover:scale-105 transition duration-300">
+        <div className={`flex flex-col items-center dark:bg-[#1c1c1c] p-4 rounded-lg shadow hover:scale-105 transition duration-300`} data-aos={className}>
             <Icon className="text-3xl text-orange-500 mb-2" />
             <h4 className="dark:text-white text-black font-semibold">{label}</h4>
         </div>

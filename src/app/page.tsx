@@ -12,7 +12,7 @@ export default function Layout() {
         <main className="min-h-screen text-white dark:bg-[#111111] bg-white">
             <Header />
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="md:block !grid gap-20">
+                <div className="md:block !grid gap-8 md:gap-20">
                     <Hero />
                     <Stats />
                     <Services />

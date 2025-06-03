@@ -29,7 +29,7 @@ const services = [
 
 export default function Services() {
     return (
-        <div className="dark:bg-[#0D0D0D] text-white  px-4" id="service_layout">
+        <div className="dark:bg-[#0D0D0D] text-white" id="service_layout">
             <div className="container mx-auto text-center">
                 <h2 className="text-3xl font-semibold mb-4 dark:text-white text-black">Services</h2>
                 <p className="text-gray-400 mb-12">Lorem ipsum dolor sit amet consectetur. Imperdiet convallis blandit felis ligula aliquam</p>
