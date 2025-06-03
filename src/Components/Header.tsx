@@ -5,7 +5,7 @@ import ThemeToggle from "./ThemeToggle";
 const Header = () => {
     const [activeTab, setActiveTab] = useState("hero");
 
-    const sections = ["hero", "service_layout", "about_me", "projects", "contact_me"];
+    const sections = ["hero", "about_me", "projects", "contact_me"];
 
     const handleTab = (id: string) => {
         setActiveTab(id);
@@ -48,7 +48,6 @@ const Header = () => {
                     {sections.map((sectionId) => {
                         const labelMap = {
                             hero: "Home",
-                            service_layout: "Services",
                             about_me: "About me",
                             projects: "Projects",
                             contact_me: "Contact me",

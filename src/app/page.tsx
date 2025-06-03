@@ -4,7 +4,6 @@ import Footer from "@/Components/Footer";
 import Header from "@/Components/Header";
 import Hero from "@/Components/Hero";
 import Portfolio from "@/Components/Portfolio";
-import Services from "@/Components/Services";
 import Stats from "@/Components/Stats";
 
 export default function Layout() {
@@ -15,7 +14,6 @@ export default function Layout() {
                 <div className="md:block !grid gap-8 md:gap-20">
                     <Hero />
                     <Stats />
-                    <Services />
                     <AboutMe />
                     <Portfolio />
                     <Footer />
