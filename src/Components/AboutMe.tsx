@@ -34,8 +34,8 @@ export default function AboutMe() {
             <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-center">
                 {/* Image Section */}
                 <div className="flex justify-center">
-                    <div className="w-full max-w-sm">
-                        <Image src="/about.png" alt="About Me" width={400} height={300} className="rounded-lg w-full object-cover" />
+                    <div className="w-full max-w-lg">
+                        <Image src="/svg/HeroImage.svg" alt="About Me" width={500} height={500} className="w-full object-cover" />
                     </div>
                 </div>
                 {/* Text Section */}
@@ -47,9 +47,14 @@ export default function AboutMe() {
                         in JavaScript, Express, Nest js and MongoDB, with a strong focus on clean, maintainable code and performance optimization. Dedicated to
                         continuous learning and eager to contribute to innovative projects within collaborative, fast-paced teams.
                     </p>
-                    <button className="bg-orange-500 text-white px-6 py-3 rounded-md font-semibold hover:bg-orange-600 flex items-center gap-2">
-                        <FaRegFilePdf /> Download CV
-                    </button>
+                    <a
+                        href="/resume.pdf"
+                        download="Harshil-CV.pdf"
+                        className="bg-orange-500 text-white font-bold py-3 px-8 rounded-md hover:bg-orange-600 transition-colors cursor-pointer flex gap-4 w-fit"
+                    >
+                        <FaRegFilePdf className="mt-1" />
+                        Download CV
+                    </a>
                 </div>
             </div>
 
@@ -80,16 +85,16 @@ export default function AboutMe() {
             <div className="mt-16">
                 <h3 className="text-2xl font-semibold mb-6 dark:text-white text-black">Skills</h3>
                 <div className="mt-16 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6 text-center">
-                    <SkillCard Icon={FaNodeJs} label="Node Js" className={"flip-left"} />
+                    <SkillCard Icon={FaNodeJs} label="Node Js" className={"fade-up-left"} />
                     <SkillCard Icon={SiNestjs} label="Nest Js" className={"fade-down-left"} />
-                    <SkillCard Icon={FaReact} label="React Js" className={""} />
-                    <SkillCard Icon={RiNextjsLine} label="Next Js" className={""} />
-                    <SkillCard Icon={RiTailwindCssFill} label="Tailwind CSS" className={""} />
-                    <SkillCard Icon={SiPostgresql} label="Postgresql" className={""} />
-                    <SkillCard Icon={SiMongodb} label="Mongoose" className={""} />
-                    <SkillCard Icon={FaAws} label="AWS" className={""} />
-                    <SkillCard Icon={SiRazorpay} label="Razorpay" className={""} />
-                    <SkillCard Icon={SiSocketdotio} label="Socket.io " className={""} />
+                    <SkillCard Icon={FaReact} label="React Js" className={"fade-down-left"} />
+                    <SkillCard Icon={RiNextjsLine} label="Next Js" className={"fade-up-left"} />
+                    <SkillCard Icon={RiTailwindCssFill} label="Tailwind CSS" className={"fade-down-left"} />
+                    <SkillCard Icon={SiPostgresql} label="Postgresql" className={"fade-up-left"} />
+                    <SkillCard Icon={SiMongodb} label="Mongoose" className={"fade-down-left"} />
+                    <SkillCard Icon={FaAws} label="AWS" className={"fade-up-left"} />
+                    <SkillCard Icon={SiRazorpay} label="Razorpay" className={"fade-down-left"} />
+                    <SkillCard Icon={SiSocketdotio} label="Socket.io " className={"fade-up-left"} />
                 </div>
             </div>
         </section>

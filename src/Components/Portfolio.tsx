@@ -3,9 +3,9 @@
 import Image from "next/image";
 
 const projects = [
-    { id: 1, name: "Event Bazaar ", client: "Indian", image: "/event.png" },
-    { id: 2, name: "Iron Depot", client: "Canada", image: "/iron-depot.png" },
-    { id: 3, name: "Solo Design Studio", client: "USA", image: "/portfolio.png" },
+    { id: 1, name: "Event Bazaar ", client: "Indian", image: "/Image/event.png" },
+    { id: 2, name: "Iron Depot", client: "Canada", image: "/Image/iron-depot.png" },
+    { id: 3, name: "Solo Design Studio", client: "USA", image: "/Image/portfolio.png" },
 ];
 
 export default function Portfolio() {
@@ -13,13 +13,13 @@ export default function Portfolio() {
         <section className="dark:bg-black dark:text-white text-black" id="projects">
             <div className="max-w-7xl mx-auto">
                 <p className="text-3xl font-bold text-center mb-8">
-                    Projects <span className="text-sm">(Top 3)</span>
+                    Projects <span className="text-xs">(Top 3)</span>
                 </p>
 
                 {/* Grid */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                     {projects.map((project) => (
-                        <div key={project.id} className="dark:bg-[#1e1e1e] rounded-xl overflow-hidden shadow-lg">
+                        <div key={project.id} className="dark:bg-[#1e1e1e] rounded-xl overflow-hidden shadow-lg" data-aos={"fade-up-left"}>
                             <div className="relative w-full h-64">
                                 <Image src={project.image} alt={project.name} fill className="object-center" />
                             </div>

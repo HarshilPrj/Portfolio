@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { FaLinkedinIn } from "react-icons/fa";
+import { FaLinkedinIn, FaRegFilePdf } from "react-icons/fa";
 
 const Home = () => {
     return (
@@ -20,17 +20,21 @@ const Home = () => {
                     >
                         <FaLinkedinIn size={20} />
                     </button>
-                    <button className="bg-orange-500 text-white font-bold py-3 px-8 rounded-md hover:bg-orange-600 transition-colors cursor-pointer">
+                    <a
+                        href="/resume.pdf"
+                        download="Harshil-CV.pdf"
+                        className="bg-orange-500 text-white font-bold py-3 px-8 rounded-md hover:bg-orange-600 transition-colors cursor-pointer flex gap-4 w-fit"
+                    >
+                        <FaRegFilePdf className="mt-1" />
                         Download CV
-                    </button>
+                    </a>
                 </div>
             </div>
 
             {/* --- Image Content --- */}
             <div className="flex justify-center order-1 md:order-2">
                 <div className="relative">
-                    <div className="absolute inset-0 bg-gradient-to-r from-gray-500 to-transparent rounded-full blur-3xl opacity-30"></div>
-                    <Image src="/hero.png" alt="Mahmood Fazile, UI/UX Designer" width={600} height={600} className="rounded-full object-cover z-10" priority />
+                    <Image src="/svg/AboutMe.svg" alt="Mahmood Fazile, UI/UX Designer" width={600} height={600} className="object-cover z-10" priority />
                 </div>
             </div>
         </section>
